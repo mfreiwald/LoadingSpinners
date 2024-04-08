@@ -22,6 +22,7 @@ struct DeferredLoadingIntro: View {
                 tapped = false
             }
         }
+        .hasMore(!tapped)
     }
 }
 
@@ -105,7 +106,7 @@ extension View {
 private struct ButtonLoadingDeferredCode: View {
     var body: some View {
         VStack {
-            Code(.swift, highlightLines: [(28...34)]) {
+            Code(.swift, highlightLines: [(2...2), (28...34)]) {
 """
 struct DeferredLoadingIndicatorModifier: ViewModifier {
   var isLoading = false

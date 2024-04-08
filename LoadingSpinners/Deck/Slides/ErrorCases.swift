@@ -8,7 +8,11 @@ struct ErrorCases: View {
     var body: some View {
         VStack {
             HStack {
-                Title("⚠️ Errors").asView
+                Text("⚠️ Errors")
+                    .apply(\.title)
+
+                 (showContent ? Text("") : Text("?"))
+                    .apply(\.title)
                 if showContent {
                     Spacer()
                 }
@@ -26,6 +30,7 @@ struct ErrorCases: View {
                 showContent = true
             }
         }
+        .hasMore(!showContent)
     }
 
     @ViewBuilder

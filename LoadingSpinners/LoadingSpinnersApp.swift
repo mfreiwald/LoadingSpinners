@@ -20,7 +20,7 @@ struct LoadingSpinnersApp: App {
 }
 
 private struct AppContent: View {
-    @State var currentSlide: Slides = Slides.allCases.first!
+    @SceneStorage("currentSlide") var currentSlide: Slides = Slides.allCases.first!
     @State var appView: AppView? = nil
 
     var body: some View {

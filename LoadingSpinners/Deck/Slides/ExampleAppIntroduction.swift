@@ -13,6 +13,7 @@ struct ExampleAppIntroduction: View {
 
 struct AppViewSlide: View {
     let appView: AppView
+    var showTitle = true
 
     var body: some View {
         VStack {
@@ -26,7 +27,9 @@ struct AppViewSlide: View {
                 }
             }
 
-            Text("PicturAI")
+            if showTitle {
+                Text("PicturAI")
+            }
         }
         .apply(\.body)
     }

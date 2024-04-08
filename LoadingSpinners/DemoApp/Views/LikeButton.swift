@@ -53,6 +53,8 @@ struct LikeButtonAnimation: View {
 
     @State private var likedAnimation = false
 
+    @Environment(\.accessibilityReduceMotion) var reduzeMotion
+
     var body: some View {
         LikeButtonContainer(liked: $liked, loading: $loading) {
             if likedAnimation {
@@ -69,7 +71,6 @@ struct LikeButtonAnimation: View {
                     .controlSize(.regular)
             }
         }
-//        .disabled(loading)
         .onChange(of: loading) { oldValue, newValue in
             if newValue {
                 likedAnimation = !liked

@@ -138,6 +138,15 @@ private struct CardRow<Content: View>: View {
     }
 }
 
+struct CardRedactedExample: View {
+    var body: some View {
+        CardRow {
+            Row(model: .placeholder)
+        }
+        .frame(height: 150)
+    }
+}
+
 private struct RowModel: Identifiable, Hashable {
     let id: String
     let title: String

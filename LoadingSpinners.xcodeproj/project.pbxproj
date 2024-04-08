@@ -24,13 +24,14 @@
 		4C18A28A2BBDE99F002F9EE8 /* BlurHashSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18A2892BBDE99F002F9EE8 /* BlurHashSlides.swift */; };
 		4C18A28C2BBE9605002F9EE8 /* DeferredLoadingIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18A28B2BBE9605002F9EE8 /* DeferredLoadingIntro.swift */; };
 		4C18A28E2BBEA963002F9EE8 /* ButtonLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18A28D2BBEA963002F9EE8 /* ButtonLoading.swift */; };
-		4C47336F2BBFD777009515D4 /* ButtonLoadingDeferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C47336E2BBFD777009515D4 /* ButtonLoadingDeferred.swift */; };
 		4C4733712BBFDEF7009515D4 /* DeferredWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4733702BBFDEF7009515D4 /* DeferredWithAnimation.swift */; };
 		4C4733732BC01750009515D4 /* AboutThisTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4733722BC01750009515D4 /* AboutThisTalk.swift */; };
 		4C9155782BC31A7300F9966A /* LongLoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9155772BC31A7300F9966A /* LongLoadingButton.swift */; };
 		4C91557A2BC31ADC00F9966A /* AppStoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9155792BC31ADC00F9966A /* AppStoreButton.swift */; };
 		4C91557C2BC4240F00F9966A /* SummarySlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91557B2BC4240F00F9966A /* SummarySlide.swift */; };
 		4C91557E2BC4241700F9966A /* ThankYouSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91557D2BC4241700F9966A /* ThankYouSlide.swift */; };
+		4C9155802BC4389000F9966A /* DeferredNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91557F2BC4389000F9966A /* DeferredNavigation.swift */; };
+		4CA426C02BC493E900642DD6 /* ClickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA426BF2BC493E900642DD6 /* ClickerHelper.swift */; };
 		4CF9DC522BAA18FC007E7206 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0666952BA8A1F900947DFD /* ImageView.swift */; };
 		4CF9DC532BAA191A007E7206 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0666902BA87D5100947DFD /* APIClient.swift */; };
 		4CF9DC542BAA191D007E7206 /* ImageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0666972BA8A60500947DFD /* ImageRowView.swift */; };
@@ -74,13 +75,14 @@
 		4C18A2892BBDE99F002F9EE8 /* BlurHashSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurHashSlides.swift; sourceTree = "<group>"; };
 		4C18A28B2BBE9605002F9EE8 /* DeferredLoadingIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredLoadingIntro.swift; sourceTree = "<group>"; };
 		4C18A28D2BBEA963002F9EE8 /* ButtonLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoading.swift; sourceTree = "<group>"; };
-		4C47336E2BBFD777009515D4 /* ButtonLoadingDeferred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoadingDeferred.swift; sourceTree = "<group>"; };
 		4C4733702BBFDEF7009515D4 /* DeferredWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredWithAnimation.swift; sourceTree = "<group>"; };
 		4C4733722BC01750009515D4 /* AboutThisTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutThisTalk.swift; sourceTree = "<group>"; };
 		4C9155772BC31A7300F9966A /* LongLoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongLoadingButton.swift; sourceTree = "<group>"; };
 		4C9155792BC31ADC00F9966A /* AppStoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreButton.swift; sourceTree = "<group>"; };
 		4C91557B2BC4240F00F9966A /* SummarySlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarySlide.swift; sourceTree = "<group>"; };
 		4C91557D2BC4241700F9966A /* ThankYouSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouSlide.swift; sourceTree = "<group>"; };
+		4C91557F2BC4389000F9966A /* DeferredNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredNavigation.swift; sourceTree = "<group>"; };
+		4CA426BF2BC493E900642DD6 /* ClickerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerHelper.swift; sourceTree = "<group>"; };
 		4CF9DC5A2BAA28B4007E7206 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
 		4CF9DC5C2BAA28CD007E7206 /* Theme+Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Environment.swift"; sourceTree = "<group>"; };
 		4CF9DC602BAA2902007E7206 /* OpenAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				4CF9DC5F2BAA28F3007E7206 /* Environment */,
 				4CF9DC5A2BAA28B4007E7206 /* SlideView.swift */,
+				4CA426BF2BC493E900642DD6 /* ClickerHelper.swift */,
 				4CF9DC5C2BAA28CD007E7206 /* Theme+Environment.swift */,
 				4C9155792BC31ADC00F9966A /* AppStoreButton.swift */,
 			);
@@ -228,8 +231,8 @@
 			children = (
 				4C18A2772BB16B45002F9EE8 /* TitleSlide.swift */,
 				4C18A2812BB4B70B002F9EE8 /* WhoAmI.swift */,
-				4C4733722BC01750009515D4 /* AboutThisTalk.swift */,
 				4CF9DC6C2BAA2B3E007E7206 /* TheProblemSlide.swift */,
+				4C4733722BC01750009515D4 /* AboutThisTalk.swift */,
 				4C18A2872BB572ED002F9EE8 /* IdentifiablePlaceholderSlide.swift */,
 				4C18A2852BB4CABF002F9EE8 /* RedactedSlide.swift */,
 				4C18A2832BB4C3B4002F9EE8 /* ExampleAppIntroduction.swift */,
@@ -240,9 +243,9 @@
 				4C4733702BBFDEF7009515D4 /* DeferredWithAnimation.swift */,
 				4C0936B42BC037F20002BFB6 /* ErrorCases.swift */,
 				4C9155772BC31A7300F9966A /* LongLoadingButton.swift */,
+				4C91557F2BC4389000F9966A /* DeferredNavigation.swift */,
 				4C91557B2BC4240F00F9966A /* SummarySlide.swift */,
 				4C91557D2BC4241700F9966A /* ThankYouSlide.swift */,
-				4C47336E2BBFD777009515D4 /* ButtonLoadingDeferred.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -337,7 +340,6 @@
 				4C18A27E2BB372A2002F9EE8 /* DeferredLoadingIndicatorModifier.swift in Sources */,
 				4CF9DC522BAA18FC007E7206 /* ImageView.swift in Sources */,
 				4CF9DC6B2BAA2A55007E7206 /* LoadingOverview.swift in Sources */,
-				4C47336F2BBFD777009515D4 /* ButtonLoadingDeferred.swift in Sources */,
 				4CF9DC5B2BAA28B4007E7206 /* SlideView.swift in Sources */,
 				4C4733712BBFDEF7009515D4 /* DeferredWithAnimation.swift in Sources */,
 				4CF9DC612BAA2902007E7206 /* OpenAppView.swift in Sources */,
@@ -351,12 +353,14 @@
 				4C18A28A2BBDE99F002F9EE8 /* BlurHashSlides.swift in Sources */,
 				4CF9DC532BAA191A007E7206 /* APIClient.swift in Sources */,
 				4CF9DC5D2BAA28CD007E7206 /* Theme+Environment.swift in Sources */,
+				4C9155802BC4389000F9966A /* DeferredNavigation.swift in Sources */,
 				4CF9DC542BAA191D007E7206 /* ImageRowView.swift in Sources */,
 				4CF9DC632BAA2922007E7206 /* AppView.swift in Sources */,
 				4C18A27A2BB359AF002F9EE8 /* ViewVersion.swift in Sources */,
 				4C0936B52BC037F20002BFB6 /* ErrorCases.swift in Sources */,
 				4C18A27C2BB363ED002F9EE8 /* SlideLikeExample.swift in Sources */,
 				4C18A28E2BBEA963002F9EE8 /* ButtonLoading.swift in Sources */,
+				4CA426C02BC493E900642DD6 /* ClickerHelper.swift in Sources */,
 				4C91557A2BC31ADC00F9966A /* AppStoreButton.swift in Sources */,
 				4C18A2822BB4B70B002F9EE8 /* WhoAmI.swift in Sources */,
 				4C9155782BC31A7300F9966A /* LongLoadingButton.swift in Sources */,

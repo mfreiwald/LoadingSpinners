@@ -23,11 +23,14 @@ struct TheProblemSlide: View {
                         showLoading = false
                     }
                 }
+                .hasMore(showLoading)
         } else {
             ContentView()
+                .padding()
                 .onDisappear {
                     showLoading = true
                 }
+                .hasMore(!showMore)
         }
     }
 

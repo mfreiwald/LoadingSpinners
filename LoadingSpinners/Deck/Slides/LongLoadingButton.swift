@@ -11,5 +11,5 @@ struct LongLoadingButton: View {
 }
 
 #Preview {
-    SlidesPreview(slides: [.longLoadingButton])
+    SlidesPreview(slides: [])
 }

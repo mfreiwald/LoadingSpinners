@@ -5,6 +5,9 @@ enum AppView: Identifiable {
     case appDemonstration
     case appOverviewRedacted
     case appOverviewHashed
+    case appOverviewAnimated
+    case navigationDelay
+    case navigationCustom
 
     var id: Self {
         self
@@ -25,6 +28,15 @@ extension AppView: View {
 
             case .appOverviewHashed:
                 OverviewHashed()
+
+            case .appOverviewAnimated:
+                OverviewAnimated()
+
+            case .navigationDelay:
+                OverviewNavigation()
+
+            case .navigationCustom:
+                OverviewNavigationCustom()
             }
         }
         .tint(.orange)
@@ -32,5 +44,5 @@ extension AppView: View {
 }
 
 #Preview {
-    AppView.appDemonstration
+    AppView.appOverviewAnimated
 }

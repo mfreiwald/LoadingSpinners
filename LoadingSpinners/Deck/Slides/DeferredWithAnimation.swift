@@ -7,6 +7,7 @@ struct DeferredWithAnimation: View {
         case withAnimationButton
         case animation1Second
         case animationDeferred
+        case reduceMotion
     }
 
     @State private var viewState: ViewState = .noAnimation1Second
@@ -15,7 +16,7 @@ struct DeferredWithAnimation: View {
     // If the call always takes around 1 second
     var body: some View {
         VStack(alignment: .leading) {
-            Title("What about longer tasks?").asView
+            Title(viewState == .reduceMotion ? "♿️ Accessbility in Mind" : "What about longer tasks?").asView
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
 
@@ -24,6 +25,43 @@ struct DeferredWithAnimation: View {
                 noAnimation(withAnimation: viewState == .withAnimationButton)
             case .animation1Second, .animationDeferred:
                 animationShort(long: viewState == .animationDeferred)
+            case .reduceMotion:
+                Code(.swift, highlightLines: [(2...2), (4...10), (16...16)]) {
+"""
+struct LikeButton: View {
+  @State private var likedAnimation = false
+  @Environment(\\.accessibilityReduceMotion) var reduceMotion
+
+  var transition: AnyTransition {
+      if reduceMotion {
+        .movingParts.pop(.orange)
+      } else {
+        .identity
+      }
+  }
+
+  var body: some View {
+    LikeButtonContainer {
+      if likedAnimation {
+        Label("Like", systemImage: "heart.fill")
+          .transition(transition)
+          .deferredLoadingIndicator(
+            loading,
+            deferredDuration: .milliseconds(1200)
+          )
+      } else {
+        Label("Like", systemImage: "heart")
+          .transition(.identity)
+          .deferredLoadingIndicator(
+            loading,
+            deferredDuration: .milliseconds(200)
+          )
+      }
+    }
+}
+
+"""
+                }.asView
             }
 
             Spacer()
@@ -40,11 +78,14 @@ struct DeferredWithAnimation: View {
                 case .animation1Second:
                     viewState = .animationDeferred
                 case .animationDeferred:
+                    viewState = .reduceMotion
+                case .reduceMotion:
                     ()
                 }
             }
         }
         .padding()
+        .hasMore(viewState != .reduceMotion)
     }
 
     @ViewBuilder

@@ -37,7 +37,6 @@ struct AppStoreButton: View {
 
     var body: some View {
         AsyncButton(progress: .download) { progress in
-            print("Button press")
             guard !downloaded else {
                 downloaded = false
                 return

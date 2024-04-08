@@ -63,6 +63,7 @@ struct SlideLikeExample: View {
                 showButtonOnly = false
             }
         }
+        .hasMore(!showButtonOnly)
     }
 
     @ViewBuilder
@@ -81,6 +82,8 @@ struct SlideLikeExample: View {
     var fullCard: some View {
         ImageRowView(data: .mock) {
             ImageViewLoading(data: $0)
+        } remixButton: {
+            RemixButton()
         } likeButton: {
             LikeButtonLoading()
                 .matchedGeometryEffect(id: "button", in: namespace)

@@ -1,7 +1,7 @@
 import SwiftUI
 import DeckUI
 
-enum Slides: CaseIterable, Identifiable {
+enum Slides: String, CaseIterable, Identifiable {
     case title
     case whoAmI
     case theProblem
@@ -20,10 +20,10 @@ enum Slides: CaseIterable, Identifiable {
     case deferredLoadingIntro
     case deferredWithAnimation
     case errorCases
-    case longLoadingButton
+    case appWithAnimation
+    case deferredNavigation
     case summary
     case thankyou
-//    case buttonLoadingDeferred
 
     var id: Self {
         self
@@ -36,7 +36,7 @@ extension Slides: View {
         case .title: TitleSlide()
         case .whoAmI: WhoAmISlide.asView
         case .theProblem: TheProblemSlide()
-        case .aboutThisTalk: AboutThisTask.asView
+        case .aboutThisTalk: AboutThisTask()
         case .exampleApp: AppViewSlide(appView: .appDemonstration)
         case .identifablePlaceholder: IdentifablePlaceholderSlide.asView
         case .mockAndPlaceholder: MockAndPlaceholderSlide.asView
@@ -51,10 +51,10 @@ extension Slides: View {
         case .deferredLoadingIntro: DeferredLoadingIntro()
         case .deferredWithAnimation: DeferredWithAnimation()
         case .errorCases: ErrorCases()
-        case .longLoadingButton: LongLoadingButton()
+        case .appWithAnimation: AppViewSlide(appView: .appOverviewAnimated)
+        case .deferredNavigation: DeferredNavigation()
         case .summary: SummarySlide()
         case .thankyou: ThankYouSlide()
-//        case .buttonLoadingDeferred: ButtonLoadingDeferred()
         }
     }
 }

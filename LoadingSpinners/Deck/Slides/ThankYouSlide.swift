@@ -28,21 +28,23 @@ struct ThankYouSlide: View {
                     .particleEffectStyle(.circle(80...120))
                     .frame(width: 200)
             }
+            .padding(.top, 160)
 
             Spacer()
 
-            VStack() {
+            VStack {
                 Text("Inspired by")
                     .italic()
-                    .font(.system(size: 25))
+                    .font(.system(size: 33))
 
                 LazyVGrid(columns: [
-                    .init(.fixed(300)),
-                    .init(.fixed(300)),
-                    .init(.fixed(300)),
-                    .init(.fixed(300))
+                    .init(.fixed(250)),
+                    .init(.fixed(250)),
+                    .init(.fixed(250)),
+                    .init(.fixed(250)),
+                    .init(.fixed(250))
                 ]){
-                    inspired("Gui Rambo", link: "https://rambo.codes/") {
+                    inspired("👨‍💻 Gui Rambo", link: "https://rambo.codes/") {
                         AsyncImage(url: URL(string: "https://rambo.codes/assets/img/2018header_v2.jpg")) {
                             $0.image?
                                 .resizable()
@@ -50,10 +52,10 @@ struct ThankYouSlide: View {
                         .scaleEffect(0.8)
                     }
 
-                    inspired("ButtonKit", link: "https://github.com/Dean151/ButtonKit") {
+                    inspired("🔘 ButtonKit", link: "https://github.com/Dean151/ButtonKit") {
                         VStack {
                             Spacer()
-                            Button("Press Me") {}
+                            Button("ButtonKit") {}
                                 .buttonStyle(.bordered)
                                 .tint(.accentColor)
                                 .font(.system(size: 40))
@@ -63,13 +65,26 @@ struct ThankYouSlide: View {
                         }
                     }
 
-                    inspired("BlurHash", link: "https://blurha.sh/") {
+                    inspired("🥰 Pow", link: "https://github.com/EmergeTools/Pow") {
+                        VStack {
+                            Spacer()
+                            Button("Pow") {}
+                                .buttonStyle(.bordered)
+                                .tint(.accentColor)
+                                .font(.system(size: 40))
+                                .fontDesign(.rounded)
+                                .fontWeight(.semibold)
+                            Spacer()
+                        }
+                    }
+
+                    inspired("🌫️ BlurHash", link: "https://blurha.sh/") {
                         Image(blurHash: ImageModel.mock.imageHash!)!
                             .resizable()
                             .scaleEffect(0.8)
                     }
 
-                    inspired("DeckUI", link: "https://github.com/joshdholtz/DeckUI") {
+                    inspired("✨ DeckUI", link: "https://github.com/joshdholtz/DeckUI") {
                         VStack {
                             Spacer()
                             Text("✨ DeckUI")
@@ -84,15 +99,37 @@ struct ThankYouSlide: View {
                 .font(.system(size: 20))
             }
             .foregroundColor(.white)
+            .scaleEffect(0.7)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        .overlay(alignment: .topLeading) {
+            VStack {
+                Image("repo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150)
+
+                Text("Slides")
+                    .font(.title.italic())
+            }
+            .padding(.leading, 50)
+            .padding(.top, 30)
+            .scaleEffect(0.8)
+
+        }
         .overlay(alignment: .topTrailing) {
-            Image("mastodon-qr")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 150)
-                .padding(.trailing, 50)
-                .padding(.top, 30)
+            VStack {
+                Image("mastodon-qr")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150)
+
+                Text("Mastodon")
+                    .font(.title.italic())
+            }
+            .padding(.trailing, 50)
+            .padding(.top, 30)
+            .scaleEffect(0.8)
         }
         .task {
             repeat {
@@ -108,6 +145,8 @@ struct ThankYouSlide: View {
     private func inspired<ImageView: View>(_ title: String, link: String, image: @escaping () -> ImageView) -> some View {
         Inspire(title, link, image)
             .frame(height: 200)
+            .font(.largeTitle)
+            .fontWeight(.semibold)
     }
 }
 
@@ -125,7 +164,7 @@ struct Inspire<Content: View>: View {
 
     var body: some View {
         VStack {
-            content
+//            content
 //                .frame(width: size, height: size)
 
             Link(title, destination: URL(string: link)!)

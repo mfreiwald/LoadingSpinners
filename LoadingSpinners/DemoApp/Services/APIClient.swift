@@ -74,7 +74,7 @@ extension APIClient {
 }
 
 
-struct ImageModel: Identifiable {
+struct ImageModel: Identifiable, Hashable {
     var id: String
     var title: String
     var description: String

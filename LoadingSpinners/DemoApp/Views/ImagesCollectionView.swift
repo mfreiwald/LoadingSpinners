@@ -9,9 +9,10 @@ import SwiftUI
 
 let cellSize: CGFloat = 250
 
-struct ImagesCollectionView<ImageView: View, LikeButton: View>: View {
+struct ImagesCollectionView<ImageView: View, RemixButton: View, LikeButton: View>: View {
     let images: [ImageModel]
     @ViewBuilder var imageView: (ImageModel) -> ImageView
+    @ViewBuilder var remixButton: () -> RemixButton
     @ViewBuilder var likeButton: () -> LikeButton
 
     var body: some View {
@@ -25,6 +26,8 @@ struct ImagesCollectionView<ImageView: View, LikeButton: View>: View {
                 ForEach(images) {
                     ImageRowView(data: $0) {
                         imageView($0)
+                    } remixButton: {
+                        remixButton()
                     } likeButton: {
                         likeButton()
                     }
@@ -40,6 +43,8 @@ struct ImagesCollectionView<ImageView: View, LikeButton: View>: View {
 #Preview {
     ImagesCollectionView(images: .mocks) {
         ImageViewLoading(data: $0)
+    } remixButton: {
+        RemixButton()
     } likeButton: {
         LikeButtonLoading()
     }
