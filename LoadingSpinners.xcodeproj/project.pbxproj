@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C006F9A2BC5384D00CB2112 /* PlaceholderIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C006F992BC5384D00CB2112 /* PlaceholderIntro.swift */; };
+		4C006F9C2BC5433F00CB2112 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C006F9B2BC5433F00CB2112 /* AppStore.swift */; };
 		4C0090B82BA3388D006A63E1 /* LoadingSpinnersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0090B72BA3388D006A63E1 /* LoadingSpinnersApp.swift */; };
 		4C0090BC2BA33890006A63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0090BB2BA33890006A63E1 /* Assets.xcassets */; };
 		4C0090C02BA33890006A63E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0090BF2BA33890006A63E1 /* Preview Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C006F992BC5384D00CB2112 /* PlaceholderIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderIntro.swift; sourceTree = "<group>"; };
+		4C006F9B2BC5433F00CB2112 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		4C0090B42BA3388D006A63E1 /* LoadingSpinners.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadingSpinners.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0090B72BA3388D006A63E1 /* LoadingSpinnersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSpinnersApp.swift; sourceTree = "<group>"; };
 		4C0090BB2BA33890006A63E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				4C18A2812BB4B70B002F9EE8 /* WhoAmI.swift */,
 				4CF9DC6C2BAA2B3E007E7206 /* TheProblemSlide.swift */,
 				4C4733722BC01750009515D4 /* AboutThisTalk.swift */,
+				4C006F992BC5384D00CB2112 /* PlaceholderIntro.swift */,
 				4C18A2872BB572ED002F9EE8 /* IdentifiablePlaceholderSlide.swift */,
 				4C18A2852BB4CABF002F9EE8 /* RedactedSlide.swift */,
 				4C18A2832BB4C3B4002F9EE8 /* ExampleAppIntroduction.swift */,
@@ -244,6 +249,7 @@
 				4C0936B42BC037F20002BFB6 /* ErrorCases.swift */,
 				4C9155772BC31A7300F9966A /* LongLoadingButton.swift */,
 				4C91557F2BC4389000F9966A /* DeferredNavigation.swift */,
+				4C006F9B2BC5433F00CB2112 /* AppStore.swift */,
 				4C91557B2BC4240F00F9966A /* SummarySlide.swift */,
 				4C91557D2BC4241700F9966A /* ThankYouSlide.swift */,
 			);
@@ -353,7 +359,9 @@
 				4C18A28A2BBDE99F002F9EE8 /* BlurHashSlides.swift in Sources */,
 				4CF9DC532BAA191A007E7206 /* APIClient.swift in Sources */,
 				4CF9DC5D2BAA28CD007E7206 /* Theme+Environment.swift in Sources */,
+				4C006F9C2BC5433F00CB2112 /* AppStore.swift in Sources */,
 				4C9155802BC4389000F9966A /* DeferredNavigation.swift in Sources */,
+				4C006F9A2BC5384D00CB2112 /* PlaceholderIntro.swift in Sources */,
 				4CF9DC542BAA191D007E7206 /* ImageRowView.swift in Sources */,
 				4CF9DC632BAA2922007E7206 /* AppView.swift in Sources */,
 				4C18A27A2BB359AF002F9EE8 /* ViewVersion.swift in Sources */,
@@ -502,6 +510,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app doesn't use the camera. You can decline it";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -541,6 +550,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app doesn't use the camera. You can decline it";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

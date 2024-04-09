@@ -2,7 +2,8 @@ import SwiftUI
 import DeckUI
 
 enum AppView: Identifiable {
-    case appDemonstration
+    case appDemonstrationBlocked
+    case appDemonstrationLoading
     case appOverviewRedacted
     case appOverviewHashed
     case appOverviewAnimated
@@ -20,7 +21,10 @@ extension AppView: View {
             Theme.defaultValue.background
 
             switch self {
-            case .appDemonstration:
+            case .appDemonstrationBlocked:
+                OverviewLoadingBlocked()
+                
+            case .appDemonstrationLoading:
                 OverviewLoading()
 
             case .appOverviewRedacted:

@@ -17,7 +17,7 @@ struct TheProblemSlide: View {
                 .overlay {
                     LoadingView(size: .large)
                 }
-                .matchedGeometryEffect(id: "loading", in: namespace)
+                .matchedGeometryEffect(id: "loading2", in: namespace)
                 .onTapGesture {
                     withAnimation {
                         showLoading = false
@@ -48,7 +48,7 @@ struct TheProblemSlide: View {
                 .overlay {
                     LoadingView(size: .large)
                 }
-                .matchedGeometryEffect(id: "loading", in: namespace)
+                .matchedGeometryEffect(id: "loading2", in: namespace)
 
             if showMore {
                 Spacer()

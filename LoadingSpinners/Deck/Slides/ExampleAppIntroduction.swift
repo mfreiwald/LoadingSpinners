@@ -1,16 +1,6 @@
 import DeckUI
 import SwiftUI
 
-struct ExampleAppIntroduction: View {
-    var body: some View {
-        AppViewSlide(appView: .appDemonstration)
-    }
-}
-
-#Preview {
-    ExampleAppIntroduction()
-}
-
 struct AppViewSlide: View {
     let appView: AppView
     var showTitle = true

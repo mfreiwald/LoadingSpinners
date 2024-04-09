@@ -108,7 +108,7 @@ struct RedactedSlideExtendedExample: View {
         }.value
     }
 }
-private struct Row: View {
+struct Row: View {
     let model: RowModel
 
     var body: some View {
@@ -122,8 +122,9 @@ private struct Row: View {
     }
 }
 
-private struct CardRow<Content: View>: View {
+struct CardRow<Content: View>: View {
     @ViewBuilder var content: () -> Content
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 12)
             .fill(.background)
@@ -147,7 +148,7 @@ struct CardRedactedExample: View {
     }
 }
 
-private struct RowModel: Identifiable, Hashable {
+struct RowModel: Identifiable, Hashable {
     let id: String
     let title: String
     let description: String

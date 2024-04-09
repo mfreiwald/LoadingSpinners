@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+struct ImageViewBlocked: View {
+    let data: ImageModel
+
+    var body: some View {
+        ImageViewContainer(data: data) {
+            RoundedRectangle(cornerRadius: 12)
+                .fill(.gray.opacity(0.4))
+                .frame(width: 70, height: 70)
+        }
+    }
+}
+
 struct ImageViewLoading: View {
     let data: ImageModel
 

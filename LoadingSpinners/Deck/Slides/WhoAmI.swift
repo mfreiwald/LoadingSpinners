@@ -57,7 +57,7 @@ struct WhoAmI: View {
 
                 Text("IT-Consultant @ \(Text("Netlight").italic().foregroundColor(.purple))")
             }
-            .loadingDelayAppeared(.seconds(1))
+            .loadingDelayAppeared(.seconds(3))
 
             HStack(spacing: hSpacing) {
                 Text("👨‍💻")
@@ -79,14 +79,14 @@ struct WhoAmI: View {
                         .foregroundStyle(Color.blue.gradient)
                 }
             }
-            .loadingDelayAppeared(.seconds(3))
+            .loadingDelayAppeared(.seconds(4))
 
             HStack(spacing: hSpacing) {
                 RotatingSwift()
 
                 Text("Enjoy making fluid apps")
             }
-            .loadingDelayAppeared(.seconds(4))
+            .loadingDelayAppeared(.seconds(5))
 
         }
         .apply(\.body)

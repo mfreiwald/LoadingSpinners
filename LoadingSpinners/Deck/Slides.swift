@@ -6,9 +6,11 @@ enum Slides: String, CaseIterable, Identifiable {
     case whoAmI
     case theProblem
     case aboutThisTalk
-    case exampleApp
-    case identifablePlaceholder
+    case exampleAppBlocked
+    case exampleAppLoading
+    case placeholderIntro
     case mockAndPlaceholder
+    case identifablePlaceholder
     case redacted
     case mockAndPlaceholderExample
     case appWithRedacted
@@ -22,6 +24,7 @@ enum Slides: String, CaseIterable, Identifiable {
     case errorCases
     case appWithAnimation
     case deferredNavigation
+    case appStore
     case summary
     case thankyou
 
@@ -37,9 +40,11 @@ extension Slides: View {
         case .whoAmI: WhoAmISlide.asView
         case .theProblem: TheProblemSlide()
         case .aboutThisTalk: AboutThisTask()
-        case .exampleApp: AppViewSlide(appView: .appDemonstration)
-        case .identifablePlaceholder: IdentifablePlaceholderSlide.asView
+        case .exampleAppBlocked: AppViewSlide(appView: .appDemonstrationBlocked)
+        case .exampleAppLoading: AppViewSlide(appView: .appDemonstrationLoading)
+        case .placeholderIntro: PlaceholderIntro()
         case .mockAndPlaceholder: MockAndPlaceholderSlide.asView
+        case .identifablePlaceholder: IdentifablePlaceholderSlide.asView
         case .redacted: RedactedSlide()
         case .mockAndPlaceholderExample: MockAndPlaceholderInActionSlide()
         case .appWithRedacted: AppViewSlide(appView: .appOverviewRedacted)
@@ -53,6 +58,7 @@ extension Slides: View {
         case .errorCases: ErrorCases()
         case .appWithAnimation: AppViewSlide(appView: .appOverviewAnimated)
         case .deferredNavigation: DeferredNavigation()
+        case .appStore: AppStore()
         case .summary: SummarySlide()
         case .thankyou: ThankYouSlide()
         }

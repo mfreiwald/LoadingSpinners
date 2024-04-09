@@ -24,7 +24,7 @@ struct TitleSlide: View {
         case .loading:
             LoadingView(size: .large)
                 .scaleEffect(2.0)
-                .matchedGeometryEffect(id: "loading", in: namespace)
+                .matchedGeometryEffect(id: "loading1", in: namespace)
                 .task {
                     try? await Task.sleep(for: .seconds(3))
                     withAnimation {
@@ -36,7 +36,7 @@ struct TitleSlide: View {
                 LoadingView(size: .large)
                                 .offset(x: -40)
                                 .scaleEffect(2.0)
-                                .matchedGeometryEffect(id: "loading", in: namespace)
+                                .matchedGeometryEffect(id: "loading1", in: namespace)
 
                     titleDeck
                     .delayAppeared(.milliseconds(200)) { EmptyView() }

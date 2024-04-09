@@ -1,6 +1,48 @@
 import SwiftUI
 import Core
 
+struct OverviewLoadingBlocked: View {
+    @State var showLoadingAndBlockUI = false
+
+    var body: some View {
+        OverviewContainer { data, imageView, remixButton, likeButton in
+            ImagesCollectionView(images: data, imageView: imageView, remixButton: remixButton, likeButton: likeButton)
+                .onChange(of: data.isEmpty, initial: true) { oldValue, isEmpty in
+                    if isEmpty {
+                        showLoadingAndBlockUI = true
+                    } else {
+                        Task {
+                            try? await Task.sleep(for: .seconds(4))
+                            showLoadingAndBlockUI = false
+                        }
+                    }
+                }
+        } imageView: {
+            ImageViewBlocked(data: $0)
+        } remixButton: {
+            RemixButtonBlocked {
+                showLoadingAndBlockUI = $0
+            }
+        } likeButton: {
+            LikeButtonBlocked {
+                showLoadingAndBlockUI = $0
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .allowsHitTesting(!showLoadingAndBlockUI)
+        .overlay {
+            if showLoadingAndBlockUI {
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(.gray.opacity(0.8))
+                    .frame(width: 200, height: 200)
+                    .overlay {
+                        LoadingView(size: .large)
+                    }
+            }
+        }
+    }
+}
+
 struct OverviewLoading: View {
     var body: some View {
         OverviewContainer { data, imageView, remixButton, likeButton in

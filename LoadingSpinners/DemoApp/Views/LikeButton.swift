@@ -16,6 +16,23 @@ struct LikeButtonDisabled: View {
     }
 }
 
+struct LikeButtonBlocked: View {
+    var loadingChanged: (Bool) -> ()
+    @State private var liked = false
+    @State private var loading = false
+
+    var body: some View {
+        LikeButtonContainer(liked: $liked, loading: $loading) {
+            Label("Like", systemImage: liked ? "heart.fill" : "heart")
+                .labelStyle(.iconOnly)
+                .controlSize(.regular)
+        }
+        .onChange(of: loading, initial: false) { _, isLoading in
+            loadingChanged(isLoading)
+        }
+    }
+}
+
 struct LikeButtonLoading: View {
     @State private var liked = false
     @State private var loading = false

@@ -33,6 +33,31 @@ struct ImageRowView<ImageView: View, RemixButton: View, LikeButton: View>: View 
     }
 }
 
+struct RemixButtonBlocked: View {
+    var loadingChanged: (Bool) -> Void
+    @State private var runRemix = false
+
+    var body: some View {
+        Button {
+            runRemix = true
+        } label: {
+            Group {
+                Label("Remix", systemImage: "repeat")
+            }
+            .lineLimit(1)
+            .frame(maxWidth: .infinity)
+            .labelStyle(.titleAndIcon)
+            .controlSize(.regular)
+        }
+        .task(id: runRemix) {
+            guard runRemix else { return }
+            loadingChanged(true)
+            try? await Task.sleep(for: .seconds(8))
+            runRemix = false
+            loadingChanged(false)
+        }
+    }
+}
 struct RemixButton: View {
     @Environment(\.redactionReasons) private var redactionReasons
 
